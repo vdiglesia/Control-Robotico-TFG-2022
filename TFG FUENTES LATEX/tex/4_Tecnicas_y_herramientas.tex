@@ -1,0 +1,87 @@
+\capitulo{4}{Técnicas y herramientas}
+En este apartado de la memoria veremos y daremos un repaso a aquellas herramientas y técnicas utilizadas para el desarrollo, la gestión y planificación del proyecto. Podremos ver que es el conjunto y uso adecuado de todas ellas, lo que dará lugar a un buen resultado para nuestro trabajo. 
+\section{Metodología de Trabajo - SCRUM}
+SCRUM es una forma de trabajo para desarrollar software de manera ágil\cite{AGILE}, es decir un método cuyos principios son basados en el desarrollo de manera iterativa e incremental, con flexibilidad para adoptar cambios o requisitos y donde la colaboración con el cliente se considera importante. En este tipo de trabajo destaca el hecho de organizar las tareas en sprints realistas que se deben cumplir en los plazos estimados, que generalmente suelen ser cortos.  Dentro de un equipo que trabaja bajo SCRUM\cite{SCRUM} es importante conocer los distintos eventos que se pueden dar, algunos de ellos son:
+    \begin{itemize}
+        \item \textbf{{Planificación de sprints}}: Donde se planifican las tareas y objetivos del sprint.
+        \item \textbf{{Meetings}}: Reuniones que pueden ser diarias o semanales, para controlar qué se está haciendo o resolver problemas que aparezcan.
+        \item \textbf{{Revisión de sprint}}: Momento en el que se revisa que se han cumplido los objetivos marcados por el sprint, en el tiempo y forma deseado.
+    \end{itemize}
+En el caso de este proyecto, hemos trabajado en sprints de una duración de dos semanas, los cuales al finalizar este tiempo, eran revisados por mi parte y la del tutor para asegurarnos que todo era realizado según lo planificado.  Al día siguiente, realizábamos la planificación del siguiente dejando definidos los objetivos.
+
+\section{Control de versiones - Git}
+El control de versiones\cite{Controldeversiones} define la manera en la que se rastrean y gestionan los cambios en los códigos de software de un proyecto. Podríamos decir que son herramientas que nos dan la posibilidad de gestionar los cambios de código fuente software a lo largo del tiempo.
+
+En este caso el seleccionado no es otro que Git, ya que es el que mis compañeros de trabajo utilizan en ITCL y es el obligatorio para acceder a trabajar con sus repositorios, que son privados. Git es un proyecto que fue diseñado por Linus Torvalds, el ingeniero de software finlandés que inició y desarrolló Linux. Git es un sistema de control de versiones distribuido, lo que nos permite trabajar sobre el mismo proyecto de manera común sin tener que necesitar la misma red. En este sistema la copia del código desarrollado de cada persona es también una especie de repositorio que alberga el historial de los cambios, de manera que se desarrolla localmente y no ponemos en riesgo el proyecto de origen.
+El cliente utilizado para llevar a cabo este control de versiones con Git ha sido SourceTree
+\subsection{SourceTree}
+SourceTree\cite{SourceTree} es un cliente Git gratuito para ordenador. Nos da simplicidad en la manera de interactuar con nuestro repositorio gracias a su sencilla interfaz gráfica de usuario (GUI), a través de la cual podemos observar con facilidad los cambios hechos en el código, subir nuestros cambios o actualizar a los que han realizado nuestros compañeros de equipo. Estos motivos y alguna funcionalidad más, han hecho que la decisión de usar SourceTree haya sido acertada. Se valoraron otros clientes como GitKraken.
+\newpage
+\section{Repositorio - BitBucket}
+Debido a que el único lugar donde desarrollé software (por la necesidad del material tecnológico) fue en las instalaciones de ITCL, el proyecto fue alojado en el servidor privado que ITCL tiene de BitBucket. En caso de haber requerido de desarrollo desde casa o fuera de allí hubiera realizado una copia en alguna plataforma como SourceForge o GitHub.
+
+BitBucket es una herramienta que nos ofrece el alojamiento de código y colaboración mediante sistema Git que se encuentra diseñada para el trabajo en equipos. Admite también el trabajo con Mercurial. Admite el alojamiento propio en servidores privados, como es el caso en ITCL donde tenemos alojado el proyecto en nuestro servidor propio. También se puede alojar en servidores comerciales.
+
+\section{Gestión del Proyecto - Jira}
+En cuanto a la manera de organizar y gestionar el proyecto, tras hablar con mi tutor me quedó claro que la mejor opción y la que más se ajustaba a nuestras necesidades era Jira\cite{Jira}. Personalmente no lo conocía pero es la herramienta con la que se administran los proyectos aquí en ITCL y la experiencia ha sido realmente positiva.
+
+Jira, por otra parte es una herramienta que nos sirve para administrar las tareas que tenemos dentro de un proyecto, gestionarlo y seguir aquellas incidencias o errores que nos surjan. Tiene funcionalidades muy útiles como la creación de hojas de ruta, informes o resúmenes de información util. Por otro lado podemos crear flujos de trabajo personalizados y dotar de una gran flexibilidad a nuestros proyectos.
+
+\section{Software de Realidad Virtual}
+En este apartado comentaremos brevemente las dos herramientas software que nos permiten la conexión de nuestros dispositivos de realidad virtual, tanto las gafas Oculus Quest 2\cite{Quest2} como los guantes Nova\cite{SGloveNova} de SenseGlove con nuestro ordenador.
+\subsection{SenseCom}
+A la hora de desarrollar en escritorio con nuestros guantes Nova, necesitamos de este software llamado SenseCom para conectarnos a ellos. Este software hará de puente y se puede encontrar en el GitHub de los desarrolladores de los guantes. 
+Mientras esté activo podremos interactuar con los guantes desde los programas que queramos , una vez realizada la primera calibración que requiere el software.
+\imagen{sensecom.PNG}{Imagen del software SenseCom con una conexión correcta.}
+\subsection{Oculus}
+El software que comparte el nombre con el de nuestro dispositivo, se encarga de establecer la conexión entre las gafas y mandos con nuestro ordenador. Es una aplicación que nos permite el realizar ajustes en la configuración, preferencias y nos da ayuda. También funciona como cualquier otra tienda online de software/videojuegos como podrían ser Origin o Steam, ya que nos permite acceder a la descarga de títulos desarrollados íntegramente para Oculus y otras apliaciones interesantes para nuestro dispositivo. Este software también hace de puente entre Unity\cite{Unity}, donde desarrollamos, y las Oculus Quest 2. 
+\section{Unity}
+Como se explicó previamente en los conceptos teóricos el motor gráfico elegido para el proyecto es Unity\cite{Unity}. Una vez explicados los conceptos teóricos de Unity y cual es su funcionamiento, en este apartado quiero hacer hincapié en dos partes diferenciadas e importantes de Unity. Una es el software UnityHub y la otra parte es la relacionada con los plugins instalados en Unity, ya que es de una amplia importancia para completar correctamente las tareas que tenemos. 
+
+Pero antes de pasar a explicar estos dos apartados comentar que la versión de Unity en la que he trabajado es la 2020.3.30f1.
+\subsection{UnityHub}
+UnityHub\cite{UnityHUB} es una herramienta que nos sirve para gestionar en nuestro ordenador los proyectos que tengamos en nuestro ordenador. La versión que utilizo actualmente es la 3.0.1, aunque existen algunas más recientes. Algunas de las posibilidades que esta herramienta nos ofrece son:
+\begin{enumerate}
+    \item Administración de cuenta de Unity y sus licencias.
+    \item Instalar diferentes versiones de Unity.
+    \item Crear proyectos, asociarlos a una versión determinada y más óptima.
+    \item Ejecutar dos versiones de Unity a la vez. 
+    \item Añadir componentes al editor.
+\end{enumerate}
+\subsection{Unity \underline{\textbf{Plugins}}}
+A la hora de desarrollar con Unity podemos utilizar nuestros propios scripts y herramientas hechas por nosotros, pero una de las cosas más interesantes de este motor es el poder añadir código creado por terceros en forma de plugin. Estos plugins se pueden añadir de manera "manual" desde los archivos fuente del proyecto o a través de la Asset Store o tienda de Unity. Estos pueden ser gratuitos o de pago. A continuación se muestran los utilizados dentro del proyecto.
+\subsubsection{Android Logcat}
+Proporciona ayuda para el desarrollo, ya que muestra mensajes de tipo log provenientes de dispositivos Android en el editor.
+\subsubsection{Oculus XR Plugin}
+Proporciona soporte de entrada y visualización de dispositivos Oculus.
+\subsubsection{Rider Editor}
+Proporciona una integración para utilizar el IDE Rider de JetBrains como editor de código en Unity. 
+\subsubsection{ROSBridge}
+Proporciona una serie de librerías que permiten la comunicación con dispositivos que tengan el sistema ROS, como nuestro brazo robótico.
+\subsubsection{SenseGlove}
+Proporciona tanto scripts útiles relacionados con los guantes y su uso, como objetos diseñados para la representación gráfica en las escenas de Unity. 
+\subsubsection{TextMesh Pro}
+Proporciona una manera avanzada de desarrollar interfaces de usuario, ya que usa técnicas avanzadas de renderizado de texto.
+\subsubsection{Unity UI}
+Proporciona las herramientas básicas para el desarrollo de interfaces de usuario.
+\subsubsection{XR Plugin Management}
+Proporciona una gestión sencilla de los plugins XR, que es un término que hace referencia a todas las realidades, tanto la virtual, como la aumentada y la mixta.
+
+\newpage
+
+\section{IDE - JetBrains Rider}
+IDE son las siglas de entorno de desarrollo integrado o lo que es más sencillo, una aplicación informática que da servicios a los desarrolladores para así facilitar la generación de código software.
+Unity nos da la posibilidad de utilizar por defecto el IDE Microsoft Visual Studio, pero el hecho de tener una licencia gratuita por ser estudiante de la Universidad de Burgos en el IDE Rider\cite{Rider} de JetBrains me hizo elegirlo.
+
+Este entorno de programación .NET que está muy destinado al uso en programación con C\#, admite el uso tanto en Windows, como Mac o Linux. Es un editor que permite el tener una experiencia positiva desarrollando código pues nos permite escribir de una manera muy ágil, con consejos y ayuda a la hora de solucionar errores. También tiene una perfecta integración con Unity, lo que nos permite poder ejecutar pruebas con Unity, además de registrar la consola.
+
+\section{Redes}
+En el desarrollo del proyecto nos hemos encontrado algún problema a la hora de gestionar la comunicación y conexión con el robot por internet, estos serán expuestos en otros puntos del trabajo. Por comentar aquellas herramientas que nos han sido útiles para solucionar los problemas vemos:
+\begin{itemize}
+    \item \textbf{SSH} (Secure Shell): Protocolo y programa que lo implementa. Esto nos proporciona la función de asistir remotamente a un servidor a través de un canal seguro.
+    \item \textbf{NMTUI} (Network Manager Text User Interface): Herramienta que permite la configuración de redes en sistemas.
+    \item\textbf{Advanced IP Scanner}: Herramienta que nos permite el explorar redes. Ofrece la posibilidad de obtener información como el nombre, estados, números IP, dirección MAC o el nombre del fabricante del dispositivo conectado.
+\end{itemize}
+
+
+

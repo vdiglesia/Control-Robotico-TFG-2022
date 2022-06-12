@@ -1,0 +1,321 @@
+\apendice{Especificación de Requisitos}
+
+\section{Introducción}
+A lo largo de este apartado veremos documentadas las posibilidades funcionales de lo desarrollado en el proyecto, centrándonos en el software final. Se especificarán cuáles eran los objetivos minimos requeridos para considerar de un buen resultado el desarrollo del proyecto, veremos tanto los requisitos funcionales como no funcionales de la aplicación
+\section{Objetivos generales}
+El objetivo general dentro de este proyecto a nivel de desarrollo, era el de llevar a cabo una aplicación que nos habilite a conseguir los siguientes puntos:
+\begin{itemize}
+    \item Establecer conexión inalámbrica entre el robot y el ordenador.
+    \item Conectar el dispositivo Oculus Quest 2 a Unity\cite{Unity}
+    \item Conectar los guantes Nova al ordenador y a Unity.
+    \item Recoger datos relevantes de seguimiento y posicionamiento de los controladores Oculus.
+    \item Recoger datos relevantes de los sensores de los guantes Nova.
+    \item Representar en las tres dimensiones del espacio virtualmente nuestra mano.
+    \item Desplazar la pinza del robot en las tres dimensiones del espacio siguiendo el movimiento de nuestra mano.
+    \item Abrir y cerrar la pinza con un gesto de nuestra mano.
+\end{itemize}
+\section{Catalogo de requisitos}
+Aquí veremos el catálogo de requisitos de nuestro software dividiendo en los siguientes dos:
+\subsection{Requisitos Funcionales}
+\begin{itemize}
+    \item RF.1 Conexión entre el robot ROS\cite{ROS} y el ordenador (ROSInitializer)
+    \begin{enumerate}
+        \item RF.1.1 Introducir el número de IP asociada al robot.
+        \item RF.1.2 Introducir el número de puerto.
+        \item RF.1.3 Botón de play.
+    \end{enumerate}
+    \item RF.2 Recogida de datos importantes con actualización constante.
+    \begin{enumerate}
+        \item RF.2.1 Calibración Nova
+        \item RF.2.2 Recibir datos de posición de Oculus Quest 2.
+        \item RF.2.3 Recibir datos de rotación de Oculus Quest 2.
+        \item RF.2.4 Recibir datos de sensores de Nova.
+    \end{enumerate}
+    \item RF.3 Adaptación y Aplicación de datos con actualización constante.
+    \begin{enumerate}
+        \item RF.3.1 Linkeo de manos con Nova en la escena.
+        \item RF.3.2 Creación de mensaje de posición predeterminada(casa).
+        \item RF.3.3 Creación de mensajes ROS de posición y rotación.
+        \item RF.3.4 Creación de mensajes ROS de apertura de la pinza.
+    \end{enumerate}
+    \item RF.4 Envío de mensajes ROS al robot.
+    \begin{enumerate}
+        \item RF.4.1 Envío de mensaje de posición y rotación.
+        \item RF.4.2 Envío de mensaje de apertura.
+    \end{enumerate}
+    \item RF.5 Finalizar ejecución.
+    \begin{itemize}
+        \item RF.5.1 Botón de finalizar conexión.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Requisitos No Funcionales}
+A continuación veremos los requisitos  no funcionales de lo desarrollado, que se refieren a todos aquellos requisitos que describen características de funcionamiento y no las tareas que realiza o la información que guarda.
+
+
+\textbf{RNF.1 - Eficiencia:} El uso del software desarrollado tiene que ser eficiente, que no provoque errores y se ejecute cumpliendo con los requisitos funcionales en tiempos lógicos(sin desarrollar grandes delays).
+
+ \textbf{RNF.2 - Escalabilidad:} Este proyecto sirve como cimiento o base de uno de mayores proporciones, por lo que nuestro software tiene que poder ser escalable. Ya que gracias a él se podrán ver otro tipo de softwares.
+
+\textbf{RNF.3 - Rendimiento:} El resultado de este proyecto necesita de un alto rendimiento a la hora de ejecutarlo ya que de no ser así, la experiencia del usuario se vería afectada y el software perdería valor.
+
+ \textbf{RNF.4 - Portabilidad:} Es un requisito indispensable de este proyecto, ya que cumpliendo con ello se podrá realizar una fácil implementación junto a otros tipos de robot o de dispositivos.
+
+\newpage
+
+\section{Especificación de requisitos}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+         \multicolumn{2}{|c|}{\textbf{1. Conexión entre el robot ROS y el ordenador.}}                \\ \hline
+        Requisito & 1.1 - Introducir el número de IP asociada al robot.  \\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se introduce el número de IP asociado. \\ \hline
+         Descripción & El usuario de esta aplicación debe introducir el número de IP asociada al robot. \\ \hline
+        Precondición & Hallar el número de dirección IP. \\ \hline
+        Postcondiciones & A la espera del número de puerto. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{1.1 Introducir el número de IP asociada al robot.}
+    \label{1.1 Introducir el número de IP asociada al robot.}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 1.2 - Introducir el número de puerto.  \\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se introduce el número de puerto. \\ \hline
+         Descripción & El usuario de esta aplicación debe introducir el número de puerto asociada al robot. \\ \hline
+        Precondición & Hallar el número de puerto. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{1.2 - Introducir el número de puerto.}
+    \label{1.2 - Introducir el número de puerto.}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 1.3 - Botón de play.  \\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se pulsa el botón de play.. \\ \hline
+         Descripción & El usuario de esta aplicación debe pulsar el botón de play para ejecutar. \\ \hline
+        Precondición & Introducir IP y número de puerto. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{1.3 - Botón de play.}
+    \label{1.3 - Botón de play.}
+\end{table}
+
+\newpage
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+     \multicolumn{2}{|c|}{\textbf{2. Recogida de datos importantes con actualización constante.}}                \\ \hline 
+        Requisito & 2.1 - Calibración Nova  \\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se calibra el guante háptico Nova. \\ \hline
+         Descripción & Al comenzar la ejecución se realiza una calibración de los guantes Nova. \\ \hline
+        Precondición & Ejecución y tener colocado el guante. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{2.1 - Calibración Nova}
+    \label{2.1 - Calibración Nova}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8.7cm} |}
+    \hline
+        Requisito & 2.2 Recibir datos de posición de Oculus Quest 2\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se recogen los datos de posición de Oculus Quest 2. \\ \hline
+         Descripción & Se recogen los datos referidos a la posición de los controladores de Oculus, para poder representar correctamente en el espacio nuestras manos. \\ \hline
+        Precondición & Tener las gafas cerca y estar dentro de la zona de juego de Oculus. \\ \hline
+        Postcondiciones & Aplicar los datos. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{2.2 Recibir datos de posición de Oculus Quest 2}
+    \label{2.2 Recibir datos de posición de Oculus Quest 2}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8.7cm} |}
+    \hline
+        Requisito & 2.3 Recibir datos de rotación de Oculus Quest 2\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se recogen los datos de rotación de Oculus Quest 2. \\ \hline
+         Descripción & Se recogen los datos referidos a la rotación de los controladores de Oculus, para poder representar correctamente en el espacio nuestras manos. \\ \hline
+        Precondición & Tener las gafas cerca y estar dentro de la zona de juego de Oculus. \\ \hline
+        Postcondiciones & Aplicar los datos. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{2.3 Recibir datos de rotación de Oculus Quest 2}
+    \label{2.3 Recibir datos de rotación de Oculus Quest 2}
+\end{table}
+
+\newpage
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 2.4 Recibir datos de sensores de Nova\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se recogen los datos de los sensores de Nova \\ \hline
+         Descripción & Se recogen los datos necesarios de los sensores de los guantes hápticos Nova. Datos de flexión de los dedos. \\ \hline
+        Precondición & Tener los guantes puestos y calibrados. \\ \hline
+        Postcondiciones & Aplicar los datos. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{2.4 Recibir datos de sensores de Nova}
+    \label{2.4 Recibir datos de sensores de Nova}
+\end{table}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+           \multicolumn{2}{|c|}{\textbf{3. Adaptación y Aplicación de datos con actualización constante}}                \\ \hline 
+        Requisito & 3.1 Linkeo de manos con Nova en la escena\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se representan nuestras manos con los datos de los sensores\\ \hline
+         Descripción & Se representan nuestras manos en el espacio dentro de la escena de Unity, de manera realista y con actualización constante. \\ \hline
+        Precondición & Tener los guantes puestos y calibrados con los controladores montados. \\ \hline
+        Postcondiciones & Transmitir al robot. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{3.1 Linkeo de manos con Nova en la escena}
+    \label{3.1 Linkeo de manos con Nova en la escena}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 3.2 Creación de mensaje de posición predeterminada(casa).\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se crea un mensaje de posición predeterminada.\\ \hline
+         Descripción & Se crea un mensaje que llevará la pinza de nuestro brazo robótico al punto del espacio que hemos seleccionado como predeterminado. \\ \hline
+        Precondición & Tener conexión con el robot. \\ \hline
+        Postcondiciones & Envíar mensajes. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{3.2 Creación de mensaje de posición predeterminada(casa).}
+    \label{3.2 Creación de mensaje de posición predeterminada(casa).}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 3.3 Creación de mensajes ROS de posición y rotación.\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se crean mensajes de posición y rotación para nuestro robot.\\ \hline
+         Descripción & Se crean mensajes que nuestro robot interpreta y que llevará la pinza de nuestro brazo robótico al punto del espacio y con la rotación que le indiquemos con nuestro guante. \\ \hline
+        Precondición & Tener conexión con el robot, los guantes puestos y las gafas conectadas para seguir nuestras manos. \\ \hline
+        Postcondiciones & Envíar mensajes. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{3.3 Creación de mensajes ROS de posición y rotación.}
+    \label{3.3 Creación de mensajes ROS de posición y rotación.}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 3.4 Creación de mensajes ROS de apertura de la pinza.\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se crean mensajes de apertura de la pinza para nuestro robot.\\ \hline
+         Descripción & Se crean mensajes que nuestro robot interpreta y que abrirá o cerrará la pinza del robot según le indiquemos con nuestra mano. \\ \hline
+        Precondición & Tener conexión con el robot, los guantes puestos y las gafas conectadas para seguir nuestras manos. \\ \hline
+        Postcondiciones & Envíar mensajes. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{3.4 Creación de mensajes ROS de apertura de la pinza.}
+    \label{3.4 Creación de mensajes ROS de apertura de la pinza.}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+       \multicolumn{2}{|c|}{\textbf{4. Envío de mensajes ROS al robot}}                \\ \hline 
+        Requisito & 4.1 Envío de mensajes de posición y rotación\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se envían los mensajes de posición y rotación de la pinza para nuestro robot.\\ \hline
+         Descripción & Se envían los mensajes que nuestro robot interpretará y que colocará la pinza del robot en el espacio según le indiquemos con nuestra mano. \\ \hline
+        Precondición & Creación de mensajes actualizados. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{4.1 Envío de mensaje de posición y rotación}
+    \label{4.1 Envío de mensaje de posición y rotación}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+        Requisito & 4.2 Envío de mensajes de apertura\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se envían los mensajes de apertura de la pinza para nuestro robot.\\ \hline
+         Descripción & Se envían los mensajes que nuestro robot interpretará y que abrirá o cerrará la pinza del robot según le indiquemos con nuestra mano. \\ \hline
+        Precondición & Creación de mensajes actualizados. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{4.2 Envío de mensajes de apertura}
+    \label{4.2 Envío de mensajes de apertura}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| m{3cm} | m{8cm} |}
+    \hline
+       \multicolumn{2}{|c|}{\textbf{5. Finalizar ejecución}}                \\ \hline 
+        Requisito & 5.1 Botón de finalizar conexión.\\ \hline
+       Autor  &  Víctor de la Iglesia García \\ \hline
+        Versión & 1.0 \\ \hline
+        Accion/es & Se pulsa el botón que finaliza la ejecución. \\ \hline
+        Descripción & Se finalizan todos los procesos y se termina la conexión con el robot. \\ \hline
+        Precondición & Ninguno. \\ \hline
+        Postcondiciones & Ninguna. \\ \hline
+        Excepciones & Ninguna. \\ \hline
+    \end{tabular}
+    \caption{5.1 Botón de finalizar conexión.}
+    \label{5.1 Botón de finalizar conexión.}
+\end{table}
+
+
+
+
+
+
+
+

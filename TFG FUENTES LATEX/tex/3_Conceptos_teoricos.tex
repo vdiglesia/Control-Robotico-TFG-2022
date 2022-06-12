@@ -1,0 +1,135 @@
+\capitulo{3}{Conceptos teóricos}
+
+A lo largo de este apartado serán expuestos aquellos conceptos a nivel teórico, necesarios de comprender tanto para el desarrollo normal del proyecto con Unity y el conjunto de dispositivos utilizados, como para entender el funcionamiento y propósito del proyecto.
+
+Sin estas explicaciones, el desarrollo de las tareas es difícil de comprender para aquellas personas que no han trabajado previamente con estas tecnologías. 
+
+\section{Oculus Quest 2}
+
+En este punto de conceptos teóricos desarrollaremos todo aquello relacionado con las gafas de realidad virtual Oculus Quest 2. 
+
+\subsection{VR: Virtual Reality}
+La realidad virtual\cite{VR} se define como un entorno con escenas y objetos que simulan la realidad. Es generada mediante tecnologías informáticas que generan en el usuario una experiencia de inmersión.
+
+Este entorno es percibido por el usuario a través de gafas o cascos de realidad virtual, que además unido a otros dispositivos como guantes o trajes, dan al usuario una mayor experiencia de interacción con el entorno y sus objetos. Dando lugar a mayor sensación de realismo.
+
+\subsection{Oculus Quest 2}
+También conocidas como Meta Quest 2 desde Noviembre de 2021. 
+Son unas gafas de realidad virtual, las cuales nos permiten tanto vivir experiencias inmersivas, como desarrollarlas para otros usuarios.
+
+Estas gafas contienen internamente, un sistema operativo basado en Android para hacer uso únicamente de ellas y además, la posibilidad de ser conectadas al software VR de Oculus que se ejecuta en un ordenador mediante Wi-Fi o USB.
+
+Junto con las gafas, se dispone de dos controladores Touch. Uno desarrollado para cada mano y que sirven como mandos para controlar nuestras sesiones de uso de Quest 2.
+Poseen un procesador Qualcomm Snapdragon™ XR2 con 6 GB de RAM, pantalla LCD de cambio rápido con alta resolución y tasa de refresco.
+\imagen{Oculus-Quest-2.png}{Oculus Quest 2 con sus controladores Touch}
+
+\subsection{Seguimiento}
+Esta característica permite a los dispositivos el conocer instantáneamente la posición de manos, objetos e incluso en algunos casos, de ojos. Todo esto, mediante software y en conjunto con cámaras o sensores.
+
+Este seguimiento se lleva a cabo mediante 4 cámaras infrarrojas colocadas en las gafas, las cuales permiten usar la tecnología de seis grados de libertad\cite{6Grados}. Seis grados de libertad hace referencia al desplazamiento dentro de un espacio de tres dimensiones, es decir, la posibilidad de movimiento hacia arriba/abajo, delante/atrás, izquierda/derecha junto con la rotación alrededor de los tres ejes perpendiculares.
+
+Es gracias a esta tecnología que se pueda realizar un seguimiento de los movimientos de nuestra cabeza e incluso también de nuestro cuerpo, y que se pueda integrar toda esta información en la VR con una precisión totalmente realista sin necesidad de utilizar sensores externos como utilizan otros dispositivos.
+
+\newpage
+
+\section{SenseGlove Nova}
+En este punto de conceptos teóricos desarrollaremos todo aquello relacionado con los guantes hápticos de realidad virtual SenseGlove Nova.
+
+\subsection{Tecnología Háptica}
+Háptica se refiere a “Estudio de las percepciones a través del tacto” (Real Academia Española, 23/05/2022, definición 2). Este término que lo relaciona con la tecnología hace referencia a cualquier tecnología que pueda ofrecer una experiencia de tacto con la aplicación a través de fuerzas, vibraciones o movimientos al usuario.
+
+Con todo esto se pueden desarrollar objetos virtuales que ofrezcan sensaciones realistas al usuario, se pueden manipular de manera remota teleoperadores y asi permitir el control remoto de máquinas y dispositivos. 
+
+\subsection{SenseGlove Nova}
+ Estos guantes hápticos modelo Nova \cite{SGloveNova}, tienen como predecesores a los primeros llevados a cabo por la empresa, que nacen del trabajo final de la carrera de sus dos fundadores Johannes Luijten y Gijs den Butter, en la Universidad Tecnológica de Delft, Países Bajos.
+ 
+ Funcionan de manera inalámbrica gracias a su batería y se pueden conectar por Bluetooth. Estos guantes están dotados de una tecnología por encima de lo frecuente hoy en día, y es ese el motivo de su alto precio de venta al público.
+ 
+ Esta tecnología cuenta con un sensor de orientación absoluta con nueve ejes para capturar el movimiento en la muñeca. También con cuatro sensores para captar la flexión y extensión del pulgar y los dedos índice, medio y anular. Además cuenta con un sensor para capturar la abducción y aducción del pugar. 
+ 
+ \newpage
+ Para la parte de respuesta al usuario, los guantes cuentan con 4 módulos, desarrollados por ellos mismos, de retroalimentación de fuerza pasiva que ofrecen una fuerza máxima de 20N en dirección de flexión en el final de los dedos. En el lado háptico encontramos con que poseen 3 motores hápticos que funcionan emitiendo vibraciones produciendo sensaciones en el pulgar, índice y en la palma.
+ 
+\imagen{cropped-SenseGlove-Nova-glow.png}{Guante Háptico Nova}
+
+\newpage
+
+\section{Kinova Robotics}
+En este punto de conceptos teóricos desarrollaremos todo aquello relacionado con la tecnología robótica que utilizamos, Kinova Robotics.
+
+\subsection{Robótica}
+Este término hace referencia a la "Técnica que aplica la informática al diseño y empleo de aparatos que, en sustitución de personas, realizan operaciones o trabajos, por lo general en instalaciones industriales" (Real Academia Española, 23/05/2022, definición 2). De esta manera, podemos ver que la robótica \cite{Robotica} viene de cruzar en un mismo punto ciencia, ingeniería y tecnología. Todo esto con el fin de cada día cubrir más necesidades humanas. 
+
+Dependiendo del tipo de tarea a cubrir, la dificultad o incluso el lugar donde ejecutar la tarea, existen robots más básicos que únicamente se encargan de tareas sencillas como desplazar objetos hasta otros que poseen tecnologías más desarrolladas con algoritmos de aprendizaje o inteligencia artificial. Estos en función de su naturaleza pueden ser automáticos o que necesiten de teleoperación y en función de sus formas les hay estáticos, móviles, o incluso antropomorfos.    
+
+\subsection{Telerrobótica}
+Dentro de la robótica existe un área dedicada a la manipulación de robots en la distancia, utilizando para la conexión muchas veces tecnologías de tipo wireless o mediante Internet.
+La telerrobótica\cite{Telerrobotica} nace combinando dos terminologías:
+\begin{enumerate}
+    \item \textit{Teleoperación:} Hace referencia a la realización de una actividad o trabajo a distancia, que puede ser física estando a una larga distancia por ejemplo, o puede referirse a un cambio de escala, para trabajos muy precisos.
+    \item \textit{Telepresencia}\cite{Telepresencia}: Referida a aquella tecnología que nos permite "transportarnos" de un espacio puramente físico a otro, a través de la red, dotándonos de la posibilidad de experimentar el estar en ese nuevo espacio, de manera virtual. 
+\end{enumerate}
+
+\subsection{Robot Kinova}
+Para nuestro proyecto, hemos decidido utilizar el brazo robótico Kinova de segunda generación del que disponemos en ITCL. Este en concreto, posee una pinza de dos dedos al final del brazo, pero los hay con tres. Debido a la movilidad que posee y a sus ejes, este robot es un modelo 6DOF(Six Degrees of Freedom) lo que nos permite mover la pinza como ya hemos explicado anteriormente, siguiendo los seis grados de libertad.
+
+En cuanto a las características técnicas de este robot, encontramos que al ser la versión con dos dedos se nos permite sostener una carga de hasta 1,8Kg. Que tiene una velocidad lineal máxima de desplazamiento de 20 cm/s, que permite conexión por puertos como USB o Ethernet. A nivel de software el desarrollo se puede hacer con Windows, Linux o ROS. En este caso, nosotros utilizamos ROS.
+\imagen{kinova.jpg}{Imagen del brazo robótico Kinova} 
+
+\subsection{ROS}
+Las siglas ROS\cite{ROS} definen Robot Operating System, lo que nos indica que es un meta sistema operativo(en este caso de código abierto) para robots. Da servicios como los que serían esperados de un sistema operativo como puede ser el controlar dispositivos de bajo nivel, la abstracción de hardware, implementación de funcionalidades o el paso de mensajes entre procesos.
+
+ROS destaca por ser ligero y así permitir su uso con otros frameworks o estructuras de desarrollo software de robots, por ser de fácil implementación en los lenguajes actuales de programación y por su fácil escalado a procesos mayores.
+
+ROS dota de una manera de enlazar una red de procesos(llamados nodos en ROS). Estos nodos se pueden ejecutar en múltiples dispositivos y se conectan a un eje central. Los nodos se comunican entre ellos pasándose mensajes. Un nodo envía un mensaje a través de publicarlo en un topic dado. Un topic, es un nombre que se usa para identificar el contenido de un mensaje. Un nodo que esté interesado en un tipo específico de dato se suscribirá al topic apropiado. Puede haber múltiples publicadores y suscriptores para un solo topic, y un nodo puede publicar y/o suscribir a multiples topics.\imagen{ROS_basic_concepts.png}{Diagrama con conceptos básicos de ROS}
+
+\newpage
+
+\section{Unity}
+En este punto de conceptos teóricos desarrollaremos todo aquello relacionado con el motor gráfico Unity, que ha sido utilizado para el desarrollo del proyecto.
+
+\subsection{Motor Gráfico}
+Por motor gráfico\cite{MotorGrafico} entendemos un conjunto de rutinas de programación, que nos da la posibilidad de diseñar, crear o producir los funcionamientos de un juego. Alguna de las cosas que se nos permite hacer son:
+\begin{itemize}
+    \item Renderizado de gráficos que vemos en pantalla.
+    \item Elaboración de físicas que permiten ver como se generan las colisiones entre objetos.
+    \item Inteligencia Artificial para los personajes del juego.
+    \item La iluminación de cada punto del juego.
+    \item Sonidos y banda sonora del juego.
+\end{itemize}
+
+\subsection{Unity}
+En nuestro caso el motor gráfico utilizado ha sido Unity, debido a que en el departamento en el que nos encontramos usan esta tecnología.Y aunque existen otros como Unreal Engine o CryEngine, encontramos que Unity es uno de los más importantes y completos debido a su gran número de funcionalidades, y su alto grado de compatibilidad con otras aplicaciones relacionadas. Además su licencia básica para desarrollar es gratis siempre y cuando no obtengamos grandes ingresos por nuestros proyectos.
+
+En Unity para la parte de programación se utiliza el lenguaje C\# \cite{C}orientado a un tipo de objetos que son algo distintos de lo común que son los componentes que dan lugar a GameObjects.
+Además Unity nos permite realizar diferentes escenas que nos permitan interactuar con los GameObjects, dando la posibilidad de crear menús, niveles o cosas similares.
+\subsection{Escenas}
+Podemos pensar en las escenas como en aquello que contiene los entornos y menús dentro de un juego. Cada archivo de escena es como un nivel único, en el que se disponen los entornos, obstáculos, objetos de cara a desarrollar y diseñar el juego en partes.
+
+\subsection{C\#}
+C\# \cite{C} es un lenguaje de programación basado en objetos y con seguridad de tipos que tiene sus orígenes en la familia de los lenguajes C, por lo que se asemeja a estos. Es un lenguaje que da la posibilidad a los desarrolladores de crear aplicaciones seguras que se ejecutan en .NET.
+
+Se encuentra orientado a objetos y posee características que facilitan crear software sólido y duradero.
+
+\subsection{GameObjects}
+Este probablemente se considere como el concepto de mayor importancia dentro de este motor gráfico.
+Todos los objetos y cosas dentro de un juego hecho con Unity son GameObjects\cite{GameObjects}, tanto como los personajes, como items del juego, las luces, elementos del entorno o cámaras.
+
+En Unity, estos GameObjects no hacen nada por si mismos sin propiedades que puedan convertirlos en aquello que queremos tener dentro de nuestra escena. Es por este motivo que necesitan que se les añada una serie de componentes, que mezclados haran que nuestro objeto se convierta en lo que queriamos.
+
+\subsection{Components}
+Los components\cite{Componentes} son las piezas que al unirse dan funcionalidades a cada GameObject. 
+Siempre al crear cualquier GameObject, se le dota por defecto de la componente Transform\cite{Transform}, ya que esta es la que marca la ubicación, rotación y la escala de un GameObject a lo largo de nuestro mundo. Con nuestro inspector podemos añadir componentes a nuestros objetos y una vez añadidos, modificar los valores y opciones que nos ofrecen esos componentes.
+
+Además Unity nos da la posibilidad de crear nuestros propios componentes, y es que cuando creamos un script en C\# con un determinado funcionamiento y variables, al asignarlo al GameObject nos aparecerá en nuestro inspector como cualquier otro componente, puediendo modificar los aspectos que queramos.
+
+A continuación se muestran algunas familias de componentes con las posibilidades que hay en nuestro motor:
+\begin{enumerate}
+    \item \textbf{Audio}: Referente a los sonidos del juego.
+    \item \textbf{Effects}: Referente a los efectos visuales del juego, como sistemas de partículas.
+    \item \textbf{Event}: Referente al sistema de eventos del motor.
+    \item \textbf{Mesh}: Referente a las mallas de los objetos para obtener 3D.
+    \item \textbf{Physics}: Referente a todo aquello que dota de un comportamiento físico como las colisiones, gravedad y otras fuerzas.
+    \item \textbf{Rendering}: Referente al renderizado del juego.
+    \item \textbf{UI}: Referente a la interfaz de usuario del juego
+\end{enumerate}
